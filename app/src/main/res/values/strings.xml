@@ -4,6 +4,12 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
+    <string name="Logout">Logout</string>
+    <string name="sign_in_text">Don\t have an account? Sign up here</string>
+    <string name="login_email">Enter your email</string>
+    <string name="login_button">Login</string>
+    <string name="login_password">Please enter your password</string>
+    <string name="login_text">Please use your email and password for login</string>
     <string name="register_already">Already registered ? Sign in here</string>
     <string name="email_register">Please enter your email address</string>
     <string name="password_register">Password</string>
