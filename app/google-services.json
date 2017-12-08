@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "730489690186",
+    "firebase_url": "https://avnutrition-31aee.firebaseio.com",
+    "project_id": "avnutrition-31aee",
+    "storage_bucket": "avnutrition-31aee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730489690186:android:e0d6b002117cb72e",
+        "android_client_info": {
+          "package_name": "com.gg.matei.avnutrition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730489690186-p37inqvl1eidopmv0715g02huolccfo8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gg.matei.avnutrition",
+            "certificate_hash": "2a6cd61c93df3d10f8b313935b47efcb5b7fbb60"
+          }
+        },
+        {
+          "client_id": "730489690186-vhjmdr3bhduhsigp5hcbf2e1lgavjjs9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW839kzgVPkPmJ14GkX0RrcZsk3m8yqfQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730489690186-vhjmdr3bhduhsigp5hcbf2e1lgavjjs9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
