@@ -25,4 +25,12 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <array name="TipulMesei">
+
+        <item>Mic Dejun</item>
+        <item>Gustare de dimineata</item>
+        <item>Pranz</item>
+        <item>Gustare de seara</item>
+        <item>Cina</item>
+    </array>
 </resources>
