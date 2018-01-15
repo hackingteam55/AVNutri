@@ -82,7 +82,7 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
 
             databaseAlimente.child(id).setValue(alimente);
 
-            Toast.makeText(this, "Aliment adaugat", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Aliment adaugat", Toast.LENGTH_LONG).show();
 
 
 
@@ -90,7 +90,7 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
 
 
         }else {
-            Toast.makeText(this, "Introduceti un nume pentru aliment", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Introduceti un nume pentru aliment", Toast.LENGTH_LONG).show();
 
         }
 

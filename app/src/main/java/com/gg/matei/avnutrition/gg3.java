@@ -60,14 +60,14 @@ public class gg3 extends AppCompatActivity implements View.OnClickListener {
 
         if(TextUtils.isEmpty(email)){
             //email is empty
-            Toast.makeText(this, "Please enter your email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter your email", Toast.LENGTH_LONG).show();
             //stopping the function
             return;
         }
 
         if(TextUtils.isEmpty(password)){
             //password is empty
-            Toast.makeText(this, "Please enter your password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter your password", Toast.LENGTH_LONG).show();
             //stopping the function
             return;
         }
