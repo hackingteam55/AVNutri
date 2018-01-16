@@ -47,6 +47,12 @@
             android:hint="@string/login_password"
             android:inputType="textPassword" />
 
+        <CheckBox
+            android:id="@+id/savepassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Save my username and password" />
+
         <Button
             android:id="@+id/login_button"
             android:layout_width="match_parent"
