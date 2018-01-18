@@ -46,6 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/alimente"
+            android:layout_marginTop="70dp"
             android:entries="@array/TipulMesei" />
 
         <Button
@@ -54,8 +55,19 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/spinnerTipulMesei"
-            android:layout_marginTop="21dp"
+            android:layout_marginTop="94dp"
             android:text="Save" />
+
+        <EditText
+            android:id="@+id/cantitate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/logout"
+            android:layout_below="@+id/alimente"
+            android:layout_marginEnd="12dp"
+            android:ems="10"
+            android:hint="Cantitate"
+            android:inputType="textPersonName" />
 
     </RelativeLayout>
 

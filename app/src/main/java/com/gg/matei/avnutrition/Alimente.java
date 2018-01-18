@@ -7,17 +7,20 @@ package com.gg.matei.avnutrition;
 public class Alimente {
 
     String alimentId;
-    String alimentNume;
-    String alimentFel;
+    String alimentId2;
+    String alimentId4;
+    String alimentId3;
 
     public Alimente(){
 
     }
 
-    public Alimente(String alimentId, String alimentNume, String alimentFel){
+    public Alimente(String alimentId, String alimentNume, String alimentFel, String alimentCant){
         this.alimentId = alimentId;
-        this.alimentNume = alimentNume;
-        this.alimentFel = alimentFel;
+        this.alimentId2 = alimentNume;
+        this.alimentId4 = alimentFel;
+        this.alimentId3 = alimentCant;
+
 
     }
 
@@ -25,11 +28,13 @@ public class Alimente {
         return alimentId;
     }
 
-    public String getAlimentNume() {
-        return alimentNume;
+    public String getAlimentId2() {
+        return alimentId2;
     }
 
-    public String getAlimentFel() {
-        return alimentFel;
+    public String getAlimentId3() {
+        return alimentId3;
     }
+
+    public String getAlimentId4() {return alimentId4; }
 }

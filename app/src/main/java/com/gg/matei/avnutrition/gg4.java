@@ -20,6 +20,7 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
     EditText alimente;
     Button save;
     Spinner spinnerTipulMesei;
+    EditText cantitate;
 
     DatabaseReference databaseAlimente;
 
@@ -37,6 +38,7 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
         alimente = (EditText) findViewById(R.id.alimente);
         save = (Button) findViewById(R.id.save);
         spinnerTipulMesei = (Spinner) findViewById(R.id.spinnerTipulMesei);
+        cantitate = (EditText)findViewById(R.id.cantitate);
 
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -73,12 +75,14 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
     private void addAlimente(){
         String name = alimente.getText().toString().trim();
         String fel = spinnerTipulMesei.getSelectedItem().toString().trim();
+        String cant = cantitate.getText().toString().trim();
 
         if(!TextUtils.isEmpty(name)){
 
             String id = databaseAlimente.push().getKey();
 
-            Alimente alimente = new Alimente(id, name, fel);
+
+            Alimente alimente = new Alimente(id, name, fel, cant);
 
             databaseAlimente.child(id).setValue(alimente);
 
