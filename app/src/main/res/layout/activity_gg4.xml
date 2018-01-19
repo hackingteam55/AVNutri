@@ -10,64 +10,68 @@
         android:layout_width="395dp"
         android:layout_height="587dp"
         android:layout_margin="6dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="8dp">
 
         <Button
             android:id="@+id/logout"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/save"
+            android:background="#0BF1E3"
             android:text="@string/Logout"
             android:textAlignment="center"
             android:textColor="#9E49D6"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:background="#0BF1E3"
             tools:layout_editor_absoluteX="362dp"
             tools:layout_editor_absoluteY="551dp" />
 
         <EditText
             android:id="@+id/alimente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:ems="10"
             android:hint="Introduceti alimentele consumate"
-            android:inputType="textPersonName" />
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinnerTipulMesei"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@+id/cantitate"
             android:layout_below="@+id/alimente"
-            android:layout_marginTop="70dp"
             android:entries="@array/TipulMesei" />
 
         <Button
             android:id="@+id/save"
-            android:layout_width="wrap_content"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spinnerTipulMesei"
-            android:layout_marginTop="94dp"
+            android:layout_below="@+id/cantitate"
             android:text="Save" />
+
+        <ListView
+            android:id="@+id/lista_jurnal2"
+            android:layout_width="388dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logout"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/cantitate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/logout"
-            android:layout_below="@+id/alimente"
-            android:layout_marginEnd="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_alignStart="@+id/save"
+            android:layout_below="@+id/spinnerTipulMesei"
             android:ems="10"
-            android:hint="Cantitate"
-            android:inputType="textPersonName" />
+            android:hint="Cantitatea"
+            android:inputType="textMultiLine" />
 
     </RelativeLayout>
 

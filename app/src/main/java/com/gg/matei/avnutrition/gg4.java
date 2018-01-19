@@ -7,13 +7,21 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class gg4 extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,6 +31,10 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
     EditText cantitate;
 
     DatabaseReference databaseAlimente;
+
+    ListView lista_jurnal2;
+
+    List<Alimente> jurnal2;
 
 
 
@@ -38,8 +50,11 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
         alimente = (EditText) findViewById(R.id.alimente);
         save = (Button) findViewById(R.id.save);
         spinnerTipulMesei = (Spinner) findViewById(R.id.spinnerTipulMesei);
-        cantitate = (EditText)findViewById(R.id.cantitate);
+        cantitate = (EditText) findViewById(R.id.cantitate);
 
+        lista_jurnal2 = (ListView)findViewById(R.id.lista_jurnal2);
+
+        jurnal2 = new ArrayList<Alimente>();
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -64,6 +79,35 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
         });
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        databaseAlimente.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                jurnal2.clear();
+
+                for (DataSnapshot alimenteSnapshot : dataSnapshot.getChildren()){
+                    Alimente alimente = alimenteSnapshot.getValue(Alimente.class);
+
+                    jurnal2.add(alimente);
+                }
+
+                JurnalLista adapter = new JurnalLista(gg4.this, jurnal2);
+                lista_jurnal2.setAdapter(adapter);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
     @Override
     public void onClick(View view){
         if (view == buttonLogout);
@@ -71,6 +115,7 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
         finish();
         startActivity(new Intent(this, gg3.class));
     }
+
 
     private void addAlimente(){
         String name = alimente.getText().toString().trim();

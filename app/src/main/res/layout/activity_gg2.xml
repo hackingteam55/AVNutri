@@ -55,12 +55,6 @@
             android:hint="@string/password_register"
             android:inputType="textPassword" />
 
-        <CheckBox
-            android:id="@+id/savepassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Remember Username and Password" />
-
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
