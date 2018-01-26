@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="prompt_email">Email</string>
+    <string name="Logout">Delogați-vă</string>
+    <string name="sign_in_text">Nu aveți cont? Creați unul aici</string>
+    <string name="login_email">Introduceți email-ul</string>
+    <string name="login_button">Logați-vă</string>
+    <string name="login_password">Parolă</string>
+    <string name="login_text">Folosiți parola și email-ul pentru a vă loga</string>
+    <string name="register_already">Aveți deja un cont? Logați-vă aici</string>
+    <string name="email_register">Introduceți adresa de email</string>
+    <string name="password_register">Parolă</string>
+    <string name="register_text">Înregistrați-vă pentru a folosi aplicația</string>
+    <string name="prompt_password">Parolă (opțional)</string>
+    <string name="action_sign_in">Creați un cont sau logați-vă</string>
+    <string name="action_sign_in_short">Logați-vă</string>
+    <string name="error_invalid_email">Această adresă de email este invalidă</string>
+    <string name="error_invalid_password">Parola este prea scurtă</string>
+    <string name="error_incorrect_password">Parola este incorectă</string>
+    <string name="error_field_required">Acest câmp este obligatoriu</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="food_intake">Introduceți alimentele consumate</string>
+    <string name="quantity">Cantitate</string>
+    <string name="save_button">Salvează</string>
+    <string name="enter_your_name">Introduceți numele</string>
+    <string name="button_register">Creați un cont</string>
+    <string name="save_password_and_email">Ține minte email-ul și parola</string>
+    <array name="TipulMesei">
+
+        <item>Mic Dejun</item>
+        <item>Gustare de dimineață</item>
+        <item>Prânz</item>
+        <item>Gustare de seară</item>
+        <item>Cină</item>
+    </array>
+</resources>

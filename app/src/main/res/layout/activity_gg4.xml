@@ -18,8 +18,9 @@
             android:id="@+id/logout"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/save"
+            android:layout_alignBaseline="@+id/save"
+            android:layout_alignBottom="@+id/save"
+            android:layout_alignEnd="@+id/lista_jurnal2"
             android:background="#0BF1E3"
             android:text="@string/Logout"
             android:textAlignment="center"
@@ -36,7 +37,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:ems="10"
-            android:hint="Introduceti alimentele consumate"
+            android:hint="@string/food_intake"
             android:textStyle="bold" />
 
         <Spinner
@@ -53,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/cantitate"
-            android:text="Save" />
+            android:text="@string/save_button" />
 
         <ListView
             android:id="@+id/lista_jurnal2"
@@ -70,7 +71,7 @@
             android:layout_alignStart="@+id/save"
             android:layout_below="@+id/spinnerTipulMesei"
             android:ems="10"
-            android:hint="Cantitatea"
+            android:hint="@string/quantity"
             android:inputType="textMultiLine" />
 
     </RelativeLayout>

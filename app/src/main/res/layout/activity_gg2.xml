@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Enter your name"
+            android:hint="@string/enter_your_name"
             android:inputType="textPersonName" />
 
         <EditText
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="63dp"
             android:background="#0BF1E3"
-            android:text="Register"
+            android:text="@string/button_register"
             android:textColor="#9E49D6"
             android:textSize="14dp"
             android:textStyle="bold" />

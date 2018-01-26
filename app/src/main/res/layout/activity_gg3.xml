@@ -51,7 +51,7 @@
             android:id="@+id/savepassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Save my username and password" />
+            android:hint="@string/save_password_and_email" />
 
         <Button
             android:id="@+id/login_button"
