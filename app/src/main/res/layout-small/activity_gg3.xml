@@ -7,35 +7,30 @@
     tools:context="com.gg.matei.avnutrition.gg3">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp"
+        android:layout_width="183dp"
+        android:layout_height="424dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="4dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/login_text"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="#9E49D6"
-            android:textSize="14dp"
+            android:textSize="12sp"
             android:textStyle="normal|bold" />
 
         <EditText
             android:id="@+id/email_login"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/login_email"
             android:inputType="textEmailAddress" />
@@ -43,10 +38,11 @@
         <EditText
             android:id="@+id/password_login"
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/login_password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textSize="12sp" />
 
         <CheckBox
             android:id="@+id/savepassword"
@@ -61,7 +57,7 @@
             android:background="#0BF1E3"
             android:text="@string/login_button"
             android:textColor="#9E49D6"
-            android:textSize="14dp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <TextView
@@ -72,7 +68,7 @@
             android:text="@string/sign_in_text"
             android:textAlignment="center"
             android:textColor="#9E49D6"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

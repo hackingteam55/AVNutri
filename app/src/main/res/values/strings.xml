@@ -7,7 +7,7 @@
     <string name="sign_in_text">Don\'t have an account? Sign up here</string>
     <string name="login_email">Enter your email</string>
     <string name="login_button">Login</string>
-    <string name="login_password">Password</string>
+    <string name="login_password">Password - minimum 8 characters</string>
     <string name="login_text">Please use your email and password for login</string>
     <string name="register_already">Already registered? Sign in here</string>
     <string name="email_register">Please enter your email address</string>
@@ -24,7 +24,7 @@
         completions."
     </string>
     <string name="food_intake">Enter your food intake</string>
-    <string name="quantity">Quantity</string>
+    <string name="quantity">Quantity - write your own measure units</string>
     <string name="save_button">Save</string>
     <string name="enter_your_name">Enter your name</string>
     <string name="button_register">Register</string>
