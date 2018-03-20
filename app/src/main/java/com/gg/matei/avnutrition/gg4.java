@@ -29,14 +29,13 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
     Button save;
     Spinner spinnerTipulMesei;
     EditText cantitate;
+    Button jurnalul_meu;
 
     DatabaseReference databaseAlimente;
 
     ListView lista_jurnal2;
 
     List<Alimente> jurnal2;
-
-
 
     private FirebaseAuth firebaseAuth;
     private Button buttonLogout;
@@ -78,44 +77,30 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
             }
         });
 
-    }
+        jurnalul_meu = (Button)findViewById(R.id.jurnalul_meu);
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        databaseAlimente.addValueEventListener(new ValueEventListener() {
+        jurnalul_meu.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                jurnal2.clear();
-
-                for (DataSnapshot alimenteSnapshot : dataSnapshot.getChildren()){
-                    Alimente alimente = alimenteSnapshot.getValue(Alimente.class);
-
-                    jurnal2.add(alimente);
-                }
-
-                JurnalLista adapter = new JurnalLista(gg4.this, jurnal2);
-                lista_jurnal2.setAdapter(adapter);
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onClick(View v) {
+                Intent jurnal = new Intent(getApplicationContext(),gg5.class);
+                startActivity(jurnal);
 
             }
         });
+
     }
+
 
     @Override
-    public void onClick(View view){
-        if (view == buttonLogout);
-        firebaseAuth.signOut();
+    public void onClick(View view) {
+        if (view == buttonLogout)
+            firebaseAuth.signOut();
         finish();
         startActivity(new Intent(this, gg3.class));
-    }
 
+
+
+    }
 
     private void addAlimente(){
         String name = alimente.getText().toString().trim();
@@ -144,6 +129,14 @@ public class gg4 extends AppCompatActivity implements View.OnClickListener {
         }
 
 
-    }
+
 
     }
+
+
+
+}
+
+
+
+

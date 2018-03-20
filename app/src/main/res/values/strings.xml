@@ -29,6 +29,7 @@
     <string name="enter_your_name">Enter your name</string>
     <string name="button_register">Register</string>
     <string name="save_password_and_email">Save my username and password</string>
+    <string name="jurnalul_meu">Jurnalul Meu</string>
     <array name="TipulMesei">
 
         <item>Breakfast</item>
