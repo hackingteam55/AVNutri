@@ -29,12 +29,12 @@ public class gg1 extends AppCompatActivity {
         },SPLASH_TIME_OUT);
 
 
-imageView = (ImageView)findViewById(R.id.animation);
-if (imageView == null) throw new AssertionError();
-imageView.setBackgroundResource(R.drawable.background);
+         imageView = (ImageView)findViewById(R.id.animation);
+     if (imageView == null) throw new AssertionError();
+         imageView.setBackgroundResource(R.drawable.background);
 
-anim = (AnimationDrawable)imageView.getBackground();
-anim.start();
+         anim = (AnimationDrawable)imageView.getBackground();
+         anim.start();
 
 
     }

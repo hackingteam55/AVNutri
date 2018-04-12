@@ -26,13 +26,10 @@ public class gg2 extends AppCompatActivity implements View.OnClickListener {
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gg2);
-
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -47,16 +44,15 @@ public class gg2 extends AppCompatActivity implements View.OnClickListener {
         buttonRegister = (Button) findViewById(R.id.button3);
 
         editTextEmail = (EditText) findViewById(R.id.emailregister);
+
         editTextPassword = (EditText) findViewById(R.id.passwordregister);
 
         textViewSignup = (TextView) findViewById(R.id.textalreadysign);
 
         buttonRegister.setOnClickListener(this);
+
         textViewSignup.setOnClickListener(this);
     }
-
-
-
 
     private void registerUser(){
         String email = editTextEmail.getText().toString().trim();

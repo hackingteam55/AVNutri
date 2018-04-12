@@ -40,7 +40,6 @@ public class gg3 extends AppCompatActivity implements View.OnClickListener, Text
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,18 +54,24 @@ public class gg3 extends AppCompatActivity implements View.OnClickListener, Text
         }
 
         editTextEmail = (EditText)findViewById(R.id.email_login);
+
         editTextPassword = (EditText)findViewById(R.id.password_login);
+
         login_button = (Button)findViewById(R.id.login_button);
+
         textViewLogin = (TextView)findViewById(R.id.sing_up_login);
 
 
         progressDialog = new ProgressDialog(this);
 
         login_button.setOnClickListener(this);
+
         textViewLogin.setOnClickListener(this);
 
         sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+
         editor = sharedPreferences.edit();
+
         savepassword = (CheckBox)findViewById(R.id.savepassword);
 
         if(sharedPreferences.getBoolean(KEY_REMEMBER, false))
@@ -75,10 +80,13 @@ public class gg3 extends AppCompatActivity implements View.OnClickListener, Text
             savepassword.setChecked(false);
 
         editTextEmail.setText(sharedPreferences.getString(KEY_USERNAME, ""));
+
         editTextPassword.setText(sharedPreferences.getString(KEY_PASS, ""));
 
         editTextEmail.addTextChangedListener(this);
+
         editTextPassword.addTextChangedListener(this);
+
         savepassword.setOnCheckedChangeListener(this);
 
     }
@@ -107,14 +115,22 @@ public class gg3 extends AppCompatActivity implements View.OnClickListener, Text
 
     private void managePrefs(){
         if(savepassword.isChecked()){
+
             editor.putString(KEY_USERNAME, editTextEmail.getText().toString().trim());
+
             editor.putString(KEY_PASS, editTextPassword.getText().toString().trim());
+
             editor.putBoolean(KEY_REMEMBER, true);
+
             editor.apply();
         }else{
+
             editor.putBoolean(KEY_REMEMBER, false);
+
             editor.remove(KEY_PASS);//editor.putString(KEY_PASS,"");
+
             editor.remove(KEY_USERNAME);//editor.putString(KEY_USERNAME, "");
+
             editor.apply();
         }
     }
@@ -123,6 +139,7 @@ public class gg3 extends AppCompatActivity implements View.OnClickListener, Text
     private void userLogin(){
 
         String email = editTextEmail.getText().toString().trim();
+
         String password = editTextPassword.getText().toString().trim();
 
         if(TextUtils.isEmpty(email)){
@@ -142,6 +159,7 @@ public class gg3 extends AppCompatActivity implements View.OnClickListener, Text
         //we will register the user
 
         progressDialog.setMessage("Registering, please wait...");
+
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(email,password)
